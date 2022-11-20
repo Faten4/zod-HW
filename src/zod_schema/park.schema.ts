@@ -8,7 +8,7 @@ export const parkSchema = z.object({
     name: z
       .string({ required_error: 'name is required !' })
       .min(4, 'You name must be more than 4 char'),
-    type: z.enum(['rollercoaster', 'thriller','water'], { required_error: 'type is required !' }),
+    type: z.enum(['rollercoaster', 'thriller','water'], { required_error: 'type is required and must be one of this (rollercoaster, thriller, water)!' }),
     tickets: z.number({ required_error: 'number is required !' }),
     price: z.number({ required_error: 'salary is required !' })
       
